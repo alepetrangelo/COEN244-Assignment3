@@ -37,6 +37,7 @@ class Customer
 		string getCustomerTel();
 		void setDuration(int);
 		int getDuration();
+		virtual void printInfo();
 };
 
 #endif /* CUSTOMER_H_ */

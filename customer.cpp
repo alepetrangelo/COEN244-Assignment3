@@ -78,3 +78,14 @@ void Customer::setDuration(int d)
 {
 	duration = d;
 }
+
+//prints customer info
+void Customer::printInfo()
+{
+	cout<<"Customer Info: "<<endl;
+	cout<<"Number: "<<customerNumber<<endl;
+	cout<<"Name: "<<customerName<<endl;
+	cout<<"Address: "<<customerAddress<<endl;
+	cout<<"Telephone: "<<customerTel<<endl;
+	cout<<"Allowed Rental Duration: "<<duration<<" days"<<endl;
+}
