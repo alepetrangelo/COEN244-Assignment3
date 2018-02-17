@@ -18,9 +18,8 @@ class Customer
 
 		//customer car rental info
 		Cars* cars;						//not sure if we should use pointer to array of car objects or vector of car
-		vector<Cars> carsVector;		//objects, that way we can just use push_back whenever a customer adds a car to his rental
-		int duration;					//either way, im not sure yet if we even have to have objects of Car in this class or if
-										//it should just be in the car rental management class...we'll see as we go
+		vector<Cars> carsVector;		//objects, this way we can just use push_back whenever a customer adds a car to his rental
+		int duration;
 
 	public:
 
