@@ -28,6 +28,11 @@ Cars::Cars(const Cars& c)
 	carAvailable = c.carAvailable;
 }
 
+//destructor
+Cars::~Cars()
+{
+}
+
 //gets car ID
 int Cars::getCarID() const
 {
