@@ -85,3 +85,12 @@ void Customer::printInfo()
 	cout<<"Telephone: "<<customerTel<<endl;
 	cout<<"Allowed Rental Duration: "<<duration<<" days"<<endl;
 }
+
+//comparing customers
+bool Customer::compareCustomer(const Customer& a, const Customer& b) const
+{
+	if(b.customerNumber == a.customerNumber)
+		return true;
+	else
+		return false;
+}

@@ -36,6 +36,7 @@ class Customer
 		void setDuration(int);
 		int getDuration();
 		virtual void printInfo();
+		bool compareCustomers(const Customer&, const Customer&) const;
 };
 
 #endif /* CUSTOMER_H_ */

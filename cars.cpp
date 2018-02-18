@@ -68,3 +68,12 @@ void Cars::printCarInfo()
 		cout<<"Available!";
 	else cout<<"Not Available!";
 }
+
+//comparing cars
+bool Cars::compareCars(const Cars& a, const Cars& b) const
+{
+	if(b.carID == a.carID)
+		return true;
+	else
+		return false;
+}

@@ -26,9 +26,7 @@ class Cars
 		bool getCarAvailability() const;
 		void setCarAvailability(bool);
 		void printCarInfo();
+		bool compareCars(const Cars&, const Cars&) const;
 };
-
-
-
 
 #endif /* CARS_H_ */
