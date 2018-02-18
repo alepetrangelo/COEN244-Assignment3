@@ -30,5 +30,6 @@ VIP::~VIP()
 //prints info
 void VIP::printInfo()
 {
+	cout<<"VIP Customer Info: "<<endl;
 	Customer::printInfo();
 }

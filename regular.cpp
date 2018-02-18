@@ -30,5 +30,6 @@ Regular::~Regular()
 //prints info
 void Regular::printInfo()
 {
+	cout<<"Regular Customer Info: "<<endl;
 	Customer::printInfo();
 }

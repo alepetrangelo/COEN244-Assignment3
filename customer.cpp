@@ -13,7 +13,6 @@ Customer::Customer()
 	customerAddress = "";
 	customerTel = "";
 	duration = 0;
-	cars = NULL;
 }
 
 //regular constructor
@@ -24,7 +23,6 @@ Customer::Customer(int id, string cn, string ca, string t, int d)
 	customerAddress = ca;
 	customerTel = t;
 	duration = d;
-	cars = new Cars[10]; //initialized it to 10 cars max per customer, but we could use vectors for this to be dynamic
 }
 
 //copy constructor
@@ -35,8 +33,7 @@ Customer::Customer(const Customer& c)
 	customerAddress = c.customerAddress;
 	customerTel = c.customerTel;
 	duration = c.duration;
-	cars = c.cars;					//TBD if use cars pointer or
-	carsVector = c.carsVector;		//cars vector
+	customerCars = c.customerCars;
 }
 
 //destructor
@@ -82,7 +79,6 @@ void Customer::setDuration(int d)
 //prints customer info
 void Customer::printInfo()
 {
-	cout<<"Customer Info: "<<endl;
 	cout<<"Number: "<<customerNumber<<endl;
 	cout<<"Name: "<<customerName<<endl;
 	cout<<"Address: "<<customerAddress<<endl;

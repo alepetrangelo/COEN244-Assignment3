@@ -17,8 +17,7 @@ class Customer
 		string customerTel;
 
 		//customer car rental info
-		Cars* cars;						//not sure if we should use pointer to array of car objects or vector of car
-		vector<Cars> carsVector;		//objects, this way we can just use push_back whenever a customer adds a car to his rental
+		vector<Cars> customerCars;
 		int duration;
 
 	public:
