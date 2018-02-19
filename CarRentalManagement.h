@@ -26,8 +26,8 @@ class CarRentalManagement
 		void removeCustomerList(const Customer&);
 		void rentCar(Cars&, Customer&);
 		void returnCar(Cars&, Customer&);
-		void getCustomerPrivilege(const Customer&);
-		void setCustomerPrivilege(const Customer&);
+		void getCustomerPrivilege(Customer&);
+		void setCustomerPrivilege(Customer&);
 		void searchIfCarRented(const Cars&);
 		void searchIfCustomerRentedCar(const Customer&);
 		void determineCarPrivilege(const Cars&);

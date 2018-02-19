@@ -65,21 +65,33 @@ void CarRentalManagement::returnCar(Cars& car, Customer& cus)
 }
 
 //return customer privileges
-void CarRentalManagement::getCustomerPrivilege(const Customer& cus)
+void CarRentalManagement::getCustomerPrivilege(Customer& cus)
 {
-
+	cus.printInfo();
 }
 
 //change customers privilege
-void CarRentalManagement::setCustomerPrivilege(const Customer& cus)
+void CarRentalManagement::setCustomerPrivilege(Customer& cus)
 {
-
+	cus.setDuration(25);
 }
 
 //determines whether car is rented or not
 void CarRentalManagement::searchIfCarRented(const Cars& car)
 {
-
+	for (int i=0; i<inventoryCars.size(); i++)
+		if (car.compareCars(car, inventoryCars[i]))
+			if(car.getCarAvailability())
+			{
+				cout<<"Car "<<car.getCarID()<<" is rented out and is not available!"<<endl;
+				return;
+			}
+			else
+			{
+				cout<<"Car "<<car.getCarID()<<" is available to rent!"<<endl;
+				return;
+			}
+	cout<<"Car "<<car.getCarID()<<" not found in inventory!"<<endl;
 }
 
 //determines whether customer has rented car
