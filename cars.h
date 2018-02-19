@@ -25,7 +25,7 @@ class Cars
 		string getCarType() const;
 		bool getCarAvailability() const;
 		void setCarAvailability(bool);
-		void printCarInfo();
+		void printCarInfo() const;
 		bool compareCars(const Cars&, const Cars&) const;
 };
 

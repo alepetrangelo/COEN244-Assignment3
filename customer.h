@@ -35,12 +35,15 @@ class Customer
 		string getCustomerTel();
 		void setDuration(int);
 		int getDuration();
-		virtual void printInfo();
+		virtual void printInfo() const;
 		bool compareCustomers(const Customer&, const Customer&) const;
 
 		//subsystem to deal with cars
-		void rentCar(const Cars&);
+		void rentCar(Cars&);
 		void returnCar(Cars&);
+		bool checkIfRentedCar() const;
+		void carListInfo() const;
+		bool searchCar(const Cars&) const;
 };
 
 #endif /* CUSTOMER_H_ */

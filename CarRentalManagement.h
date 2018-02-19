@@ -29,7 +29,7 @@ class CarRentalManagement
 		void getCustomerPrivilege(Customer&);
 		void setCustomerPrivilege(Customer&);
 		void searchIfCarRented(const Cars&);
-		void searchIfCustomerRentedCar(const Customer&);
+		void searchIfCustomerRentedCar(Customer&);
 		void determineCarPrivilege(const Cars&);
 		void determineCompanyCarType(const Customer&);
 };

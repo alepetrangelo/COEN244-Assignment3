@@ -28,8 +28,8 @@ Regular::~Regular()
 }
 
 //prints info
-void Regular::printInfo()
+void Regular::printInfo() const
 {
-	cout<<"Regular Customer Info: "<<endl;
+	cout<<endl<<"Regular Customer Info: "<<endl;
 	Customer::printInfo();
 }

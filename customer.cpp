@@ -77,9 +77,9 @@ void Customer::setDuration(int d)
 }
 
 //prints customer info
-void Customer::printInfo()
+void Customer::printInfo() const
 {
-	cout<<"Number: "<<customerNumber<<endl;
+	cout<<"Customer Number: "<<customerNumber<<endl;
 	cout<<"Name: "<<customerName<<endl;
 	cout<<"Address: "<<customerAddress<<endl;
 	cout<<"Telephone: "<<customerTel<<endl;
@@ -96,22 +96,50 @@ bool Customer::compareCustomers(const Customer& a, const Customer& b) const
 }
 
 //assigns car to customer
-void Customer::rentCar(const Cars& c)
+void Customer::rentCar(Cars& c)
 {
 	customerCars.push_back(c);
+	customerCars[customerCars.size()-1].setCarAvailability(false);
 }
 
 //removes car from customer
 void Customer::returnCar(Cars& c)
 {
 	for (int i=0; i<customerCars.size(); i++)
+	{
+		if (c.compareCars(c, customerCars[i]))
 		{
-			if (c.compareCars(c, customerCars[i]))
-			{
-				customerCars.erase(customerCars.begin()+i);
-				c.setCarAvailability(true);
-				return;
-			}
+			customerCars.erase(customerCars.begin()+i);
+			c.setCarAvailability(true);
+			return;
 		}
-	cout<<"Car "<<c.getCarID()<<" cannot be found"<<endl;
+	}
+	cout<<"Car #"<<c.getCarID()<<" is not rented by this customer!"<<endl;
+}
+
+//check if customer has rented a car
+bool Customer::checkIfRentedCar() const
+{
+	if (customerCars.size()>0)
+		return true;
+	else
+		return false;
+}
+
+//prints Info of all cars rented by customer
+void Customer::carListInfo() const
+{
+	for (int i=0; i<customerCars.size(); i++)
+	{
+		customerCars[i].printCarInfo();
+	}
+}
+
+//searches for specific car in customer car list
+bool Customer::searchCar(const Cars& c) const
+{
+	for (int i=0; i<customerCars.size(); i++)
+		if (c.compareCars(c, customerCars[i]))
+			return true;
+	return false;
 }

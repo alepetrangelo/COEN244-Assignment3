@@ -28,8 +28,8 @@ VIP::~VIP()
 }
 
 //prints info
-void VIP::printInfo()
+void VIP::printInfo() const
 {
-	cout<<"VIP Customer Info: "<<endl;
+	cout<<endl<<"VIP Customer Info: "<<endl;
 	Customer::printInfo();
 }

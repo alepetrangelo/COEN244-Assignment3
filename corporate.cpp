@@ -44,9 +44,9 @@ string Corporate::getCompanyAddress()
 }
 
 //print info
-void Corporate::printInfo()
+void Corporate::printInfo() const
 {
-	cout<<"Corporate Customer Info: "<<endl;
+	cout<<endl<<"Corporate Customer Info: "<<endl;
 	Customer::printInfo();
 	cout<<"Company Name: "<<companyName<<endl;
 	cout<<"Company Address: "<<companyAddress<<endl;

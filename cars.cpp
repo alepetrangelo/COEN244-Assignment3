@@ -57,21 +57,20 @@ void Cars::setCarAvailability(bool a)
 }
 
 //prints car info
-void Cars::printCarInfo()
+void Cars::printCarInfo() const
 {
-	cout<<"Car Info:"<<endl;
 	cout<<"Car ID: "<<carID<<endl;
 	cout<<"Car Type: "<<carType<<endl;
 	cout<<"Car Availability: ";
 	if (carAvailable)
-		cout<<"Available!";
-	else cout<<"Not Available!";
+		cout<<"Not rented!"<<endl;
+	else cout<<"Currently Rented!"<<endl;
 }
 
 //comparing cars
 bool Cars::compareCars(const Cars& a, const Cars& b) const
 {
-	if(b.carID == a.carID)
+	if(a.carID == b.carID)
 		return true;
 	else
 		return false;

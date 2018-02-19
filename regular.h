@@ -19,7 +19,7 @@ class Regular: public Customer
 		virtual ~Regular();
 
 		//overriden print function
-		virtual void printInfo();
+		virtual void printInfo() const;
 };
 
 #endif /* REGULAR_H_ */

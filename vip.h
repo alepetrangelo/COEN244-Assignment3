@@ -20,7 +20,7 @@ class VIP: public Customer
 		virtual ~VIP();
 
 		//overriden print function
-		virtual void printInfo();
+		virtual void printInfo() const;
 };
 
 

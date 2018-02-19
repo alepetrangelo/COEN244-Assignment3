@@ -23,7 +23,7 @@ class Corporate: public Customer
 		virtual ~Corporate();
 
 		//overriden print function
-		virtual void printInfo();
+		virtual void printInfo() const;
 
 		//member functions
 		string getCompanyName();
