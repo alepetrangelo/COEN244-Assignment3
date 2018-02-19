@@ -23,7 +23,7 @@ void CarRentalManagement::addInventoryCar(const Cars& car)
 //removes car from inventory list
 void CarRentalManagement::removeInventoryCar(const Cars& car)
 {
-	for (int i=0; i<inventoryCars.size(); i++)
+	for (unsigned int i=0; i<inventoryCars.size(); i++)
 	{
 		if (car.compareCars(car, inventoryCars[i]))
 			inventoryCars.erase(inventoryCars.begin()+i);
@@ -39,7 +39,7 @@ void CarRentalManagement::addCustomerList(const Customer& cus)
 //removes customer from customer list
 void CarRentalManagement::removeCustomerList(const Customer& cus)
 {
-	for (int i=0; i<customerList.size(); i++)
+	for (unsigned int i=0; i<customerList.size(); i++)
 		{
 			if (cus.compareCustomers(cus, customerList[i]))
 				customerList.erase(customerList.begin()+i);
@@ -49,11 +49,11 @@ void CarRentalManagement::removeCustomerList(const Customer& cus)
 //rents car to customer
 void CarRentalManagement::rentCar(Cars& car, Customer& cus)
 {
-	for (int i=0; i<inventoryCars.size(); i++)
+	for (unsigned int i=0; i<inventoryCars.size(); i++)
 		if (car.compareCars(car, inventoryCars[i]))
 			if(car.getCarAvailability())
 			{
-				for (int j=0; j<customerList.size(); j++)
+				for (unsigned int j=0; j<customerList.size(); j++)
 					if (cus.compareCustomers(cus, customerList[j]))
 					{
 						customerList[j].rentCar(car);
@@ -72,7 +72,7 @@ void CarRentalManagement::rentCar(Cars& car, Customer& cus)
 //returns car to inventory list and removes customer from customer list if only had 1 car
 void CarRentalManagement::returnCar(Cars& car, Customer& cus)
 {
-	for (int i=0; i<customerList.size(); i++)
+	for (unsigned int i=0; i<customerList.size(); i++)
 		if (cus.compareCustomers(cus, customerList[i]))
 		{
 			customerList[i].returnCar(car);
@@ -82,7 +82,7 @@ void CarRentalManagement::returnCar(Cars& car, Customer& cus)
 //return particular customer privileges
 void CarRentalManagement::getCustomerPrivilege(Customer& cus)
 {
-	for (int i=0; i<customerList.size(); i++)
+	for (unsigned int i=0; i<customerList.size(); i++)
 	{
 		if (cus.compareCustomers(cus, customerList[i]))
 		{
@@ -96,7 +96,7 @@ void CarRentalManagement::getCustomerPrivilege(Customer& cus)
 //change customers privilege
 void CarRentalManagement::setCustomerPrivilege(Customer& cus)
 {
-	for (int i=0; i<customerList.size(); i++)
+	for (unsigned int i=0; i<customerList.size(); i++)
 	{
 		if (cus.compareCustomers(cus, customerList[i]))
 		{
@@ -111,7 +111,7 @@ void CarRentalManagement::setCustomerPrivilege(Customer& cus)
 //determines whether car is rented or not
 void CarRentalManagement::searchIfCarRented(const Cars& car)
 {
-	for (int i=0; i<inventoryCars.size(); i++)
+	for (unsigned int i=0; i<inventoryCars.size(); i++)
 		if (car.compareCars(car, inventoryCars[i]))
 			if(car.getCarAvailability())
 			{
@@ -129,7 +129,7 @@ void CarRentalManagement::searchIfCarRented(const Cars& car)
 //determines whether customer has rented car
 void CarRentalManagement::searchIfCustomerRentedCar(Customer& cus)
 {
-	for (int i=0; i<customerList.size(); i++)
+	for (unsigned int i=0; i<customerList.size(); i++)
 		if (cus.compareCustomers(cus, customerList[i]))
 			if (customerList[i].checkIfRentedCar())
 			{
@@ -148,7 +148,7 @@ void CarRentalManagement::determineCarPrivilege(const Cars& car)
 {
 	cout<<"Customer duration privilege for car #"<<car.getCarID()<<": ";
 
-	for (int i=0; i<customerList.size(); i++)
+	for (unsigned int i=0; i<customerList.size(); i++)
 		if (customerList[i].searchCar(car))
 		{
 			cout<<customerList[i].getDuration()<<" days"<<endl;
@@ -160,7 +160,7 @@ void CarRentalManagement::determineCarPrivilege(const Cars& car)
 ///determines car type from company customer
 void CarRentalManagement::determineCompanyCarType(const Customer& cus)
 {
-	for (int i=0; i<customerList.size(); i++)
+	for (unsigned int i=0; i<customerList.size(); i++)
 		if (cus.compareCustomers(cus, customerList[i]))
 		{
 			cout<<endl<<"Corporate Customer #"<<customerList[i].getCustomerNumber()<<" Car Rental Info:"<<endl;
