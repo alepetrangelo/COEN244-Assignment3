@@ -10,7 +10,7 @@ class Cars
 
 		int carID;
 		string carType;
-		bool carAvailable;
+		bool carAvailable = true;
 
 	public:
 

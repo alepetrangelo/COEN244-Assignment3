@@ -87,10 +87,31 @@ void Customer::printInfo()
 }
 
 //comparing customers
-bool Customer::compareCustomer(const Customer& a, const Customer& b) const
+bool Customer::compareCustomers(const Customer& a, const Customer& b) const
 {
 	if(b.customerNumber == a.customerNumber)
 		return true;
 	else
 		return false;
+}
+
+//assigns car to customer
+void Customer::rentCar(const Cars& c)
+{
+	customerCars.push_back(c);
+}
+
+//removes car from customer
+void Customer::returnCar(Cars& c)
+{
+	for (int i=0; i<customerCars.size(); i++)
+		{
+			if (c.compareCars(c, customerCars[i]))
+			{
+				customerCars.erase(customerCars.begin()+i);
+				c.setCarAvailability(true);
+				return;
+			}
+		}
+	cout<<"Car "<<c.getCarID()<<" cannot be found"<<endl;
 }

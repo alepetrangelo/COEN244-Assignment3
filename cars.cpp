@@ -10,7 +10,6 @@ Cars::Cars()
 {
 	carID = 0;
 	carType = "";
-	carAvailable = true;
 }
 
 //regular constructor

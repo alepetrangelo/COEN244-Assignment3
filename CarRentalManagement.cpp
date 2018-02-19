@@ -47,15 +47,21 @@ void CarRentalManagement::removeCustomerList(const Customer& cus)
 }
 
 //rents car to customer
-void CarRentalManagement::rentCar(const Cars& car, const Customer& cus)
+void CarRentalManagement::rentCar(Cars& car, Customer& cus)
 {
-	cus.customerCars.push_back(car);
+	if(car.getCarAvailability())
+	{
+		cus.rentCar(car);
+		car.setCarAvailability(false);
+	}
+	else
+		cout<<"Car "<<car.getCarID()<<" is not available!"<<endl;
 }
 
 //returns car to inventory list and removes customer from customer list if only had 1 car
-void CarRentalManagement::returnCar(const Customer& cus)
+void CarRentalManagement::returnCar(Cars& car, Customer& cus)
 {
-
+	cus.returnCar(car);
 }
 
 //return customer privileges

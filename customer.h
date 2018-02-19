@@ -37,6 +37,10 @@ class Customer
 		int getDuration();
 		virtual void printInfo();
 		bool compareCustomers(const Customer&, const Customer&) const;
+
+		//subsystem to deal with cars
+		void rentCar(const Cars&);
+		void returnCar(Cars&);
 };
 
 #endif /* CUSTOMER_H_ */
