@@ -29,8 +29,8 @@ int main()
 
 	//creating 4 different types of customers
 	Regular cus1(10, "Roberto Sciortino", "7630 Rue de genes", "514-803-6171");
-	Regular cus2(11, "Alessandro Petrangelo ", "8824 Girardin", "514-574-8242");
-	Corporate cus3(12, "Donald Trump", "1600 Pennsylvania Ave.", "+1 202-456-1111", "Trump Industrial Alliances", "725 5th Ave, New York");
+	Regular cus2(1, "Gianluigi Buffon", "1 Juventus Ave","1800-JUventus");
+	Corporate cus3(11, "Alessandro Petrangelo ", "8824 Girardin", "514-574-8242");
 	VIP cus4(13, "Barack Obama", "1234 Golf Ave.", "+1 202-123-1451");
 
 	/*testing member functions of Car Rental System*/
