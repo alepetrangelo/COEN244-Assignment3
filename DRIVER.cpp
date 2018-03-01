@@ -1,4 +1,4 @@
-/*
+, /*
  * 
  *  Created on: Feb 15, 2018
  *      Authors: Roberto Sciortino, Alessandro Petrangelo
@@ -30,7 +30,7 @@ int main()
 	//creating 4 different types of customers
 	Regular cus1(10, "Roberto Sciortino", "7630 Rue de genes", "514-803-6171");
 	Regular cus2(1, "Gianluigi Buffon", "1 Juventus Ave","1800-JUventus");
-	Corporate cus3(11, "Alessandro Petrangelo ", "8824 Girardin", "514-574-8242");
+	Corporate cus3(11, "Alessandro Petrangelo ", "8824 Girardin", "514-574-8242", "Code Breaker Ltd.", "2222 Break Street");
 	VIP cus4(13, "Barack Obama", "1234 Golf Ave.", "+1 202-123-1451");
 
 	/*testing member functions of Car Rental System*/
