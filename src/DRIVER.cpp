@@ -1,4 +1,4 @@
-, /*
+/*
  * 
  *  Created on: Feb 15, 2018
  *      Authors: Roberto Sciortino, Alessandro Petrangelo
